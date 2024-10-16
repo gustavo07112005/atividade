@@ -1,0 +1,20 @@
+package produtos;
+
+public class Produto {
+	 protected String descricao;
+	    protected double valor;
+	    protected double imposto;
+	    
+	    public  Produto(String descricao, double valor) {
+	    	this.descricao = descricao;
+	    	this.valor = valor;
+	    	this.imposto = 0.10;
+	    }
+	    
+	    public double calcularValorFinal() {
+	    	return valor +(valor * imposto);
+	    }
+	    public String getDescricao() {
+	    	return descricao;
+	    }
+}
