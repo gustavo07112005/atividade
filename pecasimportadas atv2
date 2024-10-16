@@ -1,0 +1,18 @@
+package peças;
+
+public class PecasImportadas extends Peca {
+	private double taxa;
+	private double frete;
+	
+	public PecasImportadas(String nome, float custo, double lucro, double importacao, double frete) {
+		super(nome, custo, lucro);
+		this.taxa = 0.05;
+		this.frete = 0.05;
+	}
+	
+	public double calcularValorFinal() {
+		double valorTaxa = super.calcularValorFinal();
+		double valorTaxas = valorTaxa + (valorTaxa * taxa);
+		return valorTaxas + (valorTaxa * frete);
+	}
+}
