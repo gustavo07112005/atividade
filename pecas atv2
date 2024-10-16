@@ -1,0 +1,12 @@
+package peças;
+
+public class Pecas extends Peca {
+	
+	public Pecas(String nome, float custo, double lucro) {
+		super(nome, custo, lucro);
+	}
+	public double caclularValorFinal() {
+		return super.calcularValorFinal();
+		
+	}
+}
