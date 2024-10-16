@@ -1,0 +1,12 @@
+package peças;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+        Pecas peca = new Pecas("Peça na loja", 200.0f, 0.20);
+        PecasImportadas pecaImportada = new PecasImportadas("Peça importada", 200.0f, 0.20, 0.10, 0.05);
+        
+        System.out.printf("Valor final do %s: %.2f%n", peca.getNome(), peca.calcularValorFinal());
+        System.out.printf("Valor final do %s: %.2f%n", pecaImportada.getNome(), pecaImportada.calcularValorFinal());
+    }
+}
