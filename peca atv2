@@ -1,0 +1,21 @@
+package peças;
+
+public class Peca {
+	protected String nome;
+	protected float custo;
+	protected double lucro;
+	
+	public Peca(String nome, float custo, double lucro) {
+		this.nome = nome;
+		this.custo = custo;
+		this.lucro = lucro;
+	}
+	
+	public double calcularValorFinal() {
+		return custo + (custo * lucro);
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+}
