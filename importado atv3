@@ -1,0 +1,19 @@
+package produtos;
+
+public class Importado extends Produto{
+
+	private double taxa;
+	private double taxaImportacao;
+	
+	public Importado(String descricao, double valor) {
+		super(descricao, valor);
+		this.taxa = 0.05;
+		this.taxaImportacao = 0.05;
+	}
+
+	public double calcularValorFinal() {
+		double valorComImposto = super.calcularValorFinal();
+		double valorComTaxas = valorComImposto + (valorComImposto * taxa);
+		return valorComTaxas + (valorComTaxas *taxaImportacao);
+}
+}
