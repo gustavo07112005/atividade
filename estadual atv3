@@ -1,0 +1,12 @@
+package produtos;
+
+public class Estadual extends Produto {
+		public Estadual(String descricao, double valor) {
+			super (descricao, valor);
+		}
+		public double caclularValorFinal() {
+			return super.calcularValorFinal();
+			
+		}
+
+}
