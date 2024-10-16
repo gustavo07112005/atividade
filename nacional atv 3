@@ -1,0 +1,16 @@
+package produtos;
+
+public class Nacional extends Produto{
+	private double taxa;
+	
+	public Nacional(String descricao, double valor) {
+		super(descricao, valor);
+		this.taxa = 0.05;
+	}
+		public double calcularValorFinal() {
+			double valorComImposto = super.calcularValorFinal();
+			return valorComImposto + (valorComImposto * taxa);
+			
+		}
+
+}
