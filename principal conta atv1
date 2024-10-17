@@ -1,4 +1,4 @@
-Classe Contas 
+package conta;
 
 import java.util.Scanner;
 
