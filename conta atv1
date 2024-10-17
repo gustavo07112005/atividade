@@ -1,4 +1,4 @@
-Classe ContaBancaria
+package conta;
 
 public class ContaBancaria {
     private String cliente;
