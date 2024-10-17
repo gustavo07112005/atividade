@@ -1,0 +1,25 @@
+Classe ContaEspecial
+
+public class ContaEspecial extends ContaBancaria {
+    private double limite;
+
+    public ContaEspecial(String cliente, String numeroConta, double saldo, double limite) {
+        super(cliente, numeroConta, saldo);
+        this.limite = limite;
+    }
+
+    @Override
+    public void sacar(double valor) {
+        if (saldo + limite >= valor) {
+            saldo -= valor;
+        } else {
+            System.out.println("Saldo e limite insuficientes!");
+        }
+    }
+
+    @Override
+    public void mostrarDados() {
+        super.mostrarDados();
+        System.out.println("Limite: " + limite);
+    }
+}
