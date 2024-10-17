@@ -1,0 +1,31 @@
+Classe Contas 
+
+import java.util.Scanner;
+
+public class Contas {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+      
+        ContaPoupanca contaPoupanca = new ContaPoupanca("João", "12345", 1000, 15);
+        ContaEspecial contaEspecial = new ContaEspecial("João", "54321", 500, 1000);
+        
+        System.out.println("Depósito de R$200 na Conta Especial:");
+        contaEspecial.depositar(200);
+        contaEspecial.mostrarDados();
+
+        System.out.println("\nSaque de R$1000 na Conta Especial:");
+        contaEspecial.sacar(1000);
+        contaEspecial.mostrarDados();
+
+        System.out.println("\nDepósito de R$500 na Conta Poupança:");
+        contaPoupanca.depositar(500);
+        contaPoupanca.mostrarDados();
+
+        System.out.println("\nCalculando novo saldo da Conta Poupança com taxa de 2% de rendimento:");
+        contaPoupanca.calcularNovoSaldo(2);
+        contaPoupanca.mostrarDados();
+
+        scanner.close();
+    }
+}
